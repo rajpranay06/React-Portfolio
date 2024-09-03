@@ -1,11 +1,11 @@
-import React from 'react';
-import { Tilt } from 'react-tilt';
-import { motion } from 'framer-motion';
+import React from "react";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
 
-import { styles } from '../styles';
-import { services } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
-import { SectionWrapper } from '../hoc';
+import { styles } from "../styles";
+import { services } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -18,48 +18,55 @@ const ServiceCard = ({ index, title, icon }) => {
           options={{
             max: 45,
             scale: 1,
-            speed: 450
-          }} 
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+            speed: 450,
+          }}
+          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+        >
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">{title}</h3>
-          </div>
-
+          <h3 className="text-white text-[20px] font-bold text-center">
+            {title}
+          </h3>
+        </div>
       </motion.div>
     </Tilt>
-  )
-}
+  );
+};
 
 const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>
-          Introduction
-        </p>
-        <h2 className={styles.sectionHeadText}>
-          Professional Summary.
-        </h2>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Professional Summary.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"  
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-          Master’s student in Computer Science with prior experience as a Senior Software Engineer in AWS DevOps and cloud
-          migration. Skilled in managing AWS services, CI/CD pipeline development, and Java application deployment using
-          Docker and AWS Lambda. Currently deepening knowledge in advanced computer science concepts and emerging
-          technologies.
+        Master’s student in Computer Science with prior experience as a Senior
+        Software Engineer in AWS DevOps and cloud migration. Skilled in managing
+        AWS services, CI/CD pipeline development, and Java application
+        deployment using Docker and AWS Lambda. Currently deepening knowledge in
+        advanced computer science concepts and emerging technologies.
       </motion.p>
+
+      <a
+        href="https://drive.google.com/file/d/1CaOIottkYDA7S3Ty5rKNy8S_pzXWG_ti/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-5 bg-[#915eff] text-white font-bold py-2 px-4 rounded hover:bg-[#7a48d8] transition duration-300 ease-in-out"
+      >
+        Resume
+      </a>
 
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
-          <ServiceCard key={service.title} 
-          index={index} {...service} />
+          <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SectionWrapper(About, "about")
+export default SectionWrapper(About, "about");

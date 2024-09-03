@@ -5,7 +5,6 @@ import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close, github, linkedin, leetcode } from "../assets";
 
-
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
@@ -31,7 +30,9 @@ const Navbar = () => {
               {/* Can add gitlab linkedin and other website urls */}
               <div className="w-10 h-13 object-contain">
                 <div
-                  onClick={() => window.open("https://github.com/rajpranay06", "_blank")}
+                  onClick={() =>
+                    window.open("https://github.com/rajpranay06", "_blank")
+                  }
                   className="w-12 h-13 rounded-full flex justify-center items-center cursor-pointer"
                 >
                   <img
@@ -44,9 +45,14 @@ const Navbar = () => {
               </div>
             </span>
             <span className="sm:block hidden">
-            <div className="w-10 h-13 object-contain">
-              <div
-                  onClick={() => window.open("https://www.linkedin.com/in/pranay-shanigarapu/", "_blank")}
+              <div className="w-10 h-13 object-contain">
+                <div
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/in/pranay-shanigarapu/",
+                      "_blank"
+                    )
+                  }
                   className="w-12 h-13 rounded-full flex justify-center items-center cursor-pointer"
                 >
                   <img
@@ -59,9 +65,11 @@ const Navbar = () => {
               </div>
             </span>
             <span className="sm:block hidden">
-            <div className="w-10 h-13 object-contain">
-              <div
-                  onClick={() => window.open("https://leetcode.com/u/pranay_06/", "_blank")}
+              <div className="w-10 h-13 object-contain">
+                <div
+                  onClick={() =>
+                    window.open("https://leetcode.com/u/pranay_06/", "_blank")
+                  }
                   className="w-12 h-13 rounded-full flex justify-center items-center cursor-pointer"
                 >
                   <img

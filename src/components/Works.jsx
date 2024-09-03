@@ -84,6 +84,18 @@ const Works = () => {
           to demonstrate my proficiency in building and managing software solutions across different platforms and environments.
         </motion.p>
       </div>
+      <span>
+              <div className="w-10 h-13 object-contain">
+                <div
+                  onClick={() =>
+                    window.open("https://leetcode.com/u/pranay_06/", "_blank")
+                  }
+                  className="w-12 h-13 rounded-full flex justify-center items-center cursor-pointer"
+                >
+                  Resume
+                </div>
+              </div>
+            </span>
 
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (

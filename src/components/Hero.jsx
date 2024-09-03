@@ -4,6 +4,11 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+
+  const goTo=(url)=>{
+    window.open(url,'_blank');
+  }
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -25,7 +30,9 @@ const Hero = () => {
             applications to AWS Cloud.
           </p>
         </div>
+        
       </div>
+      
       <ComputersCanvas />
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
